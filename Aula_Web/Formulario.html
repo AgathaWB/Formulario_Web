@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #9AB17A, #d1c98f); /*cor da pagina principal*/
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+    
+        form {
+            background-color: #C3CC9B; /*cor da "casa" dos metodos*/
+            padding: 25px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+    
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+    
+        fieldset {
+            border: none; /*cor das janelas do formulario*/
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #E4DFB5;
+        }
+    
+        legend {
+            font-weight: bold; /*cor das legendas*/
+            color: #000;
+            padding: 0 10px;
+        }
+    
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
+    
+        label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #000;
+        }
+    
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+    
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52,152,219,0.5);
+        }
+    
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+    
+        input[type="file"] {
+            border: none;
+        }
+    
+        textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+    
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>Tipos de Inputs HTML5</h1>
+        <fieldset>
+            <legend>Identificação de Acesso</legend>
+            <div class="campo">
+                <label for="nome"></label>Nome:(Text)></label>
+                <input type="text" name="" id="" placeholder="Nome completo" required>
+            </div>
+            <div class="campo">
+                <label for="senha"></label>Senha:(password)></label>
+                <input type="password" name="" id="" placeholder="Senha" required>
+            </div>
+            <div class="campo">
+                <label for="email"></label>E-mail:(Gmail)></label>
+                <input type="email" name="" id="" placeholder="seuemail@aqui.com" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Quantitativos</legend>
+            <div class="campo">
+                <label for="idade"></label>volume:(Number)</label>
+                <input type="number" name="Idade" id="" min="18" max="100" value="18">
+            </div>
+            <div class="campo">
+                <label for="volume"></label>Volume:(Range)</label>
+                <input type="range" name="volume" id="" min="0" max="100">
+            </div>
+            <div class="campo">
+                <label for="cor"></label>Tema de cor:(color)</label>
+                <input type="color" name="cor tema" id="" value="3498db">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Agendamentos</legend>
+            <div class="campo">
+                <label for="data"></label>Data:(Date)</label>
+                <input type="date">
+            </div>
+            <div class="campo">
+                <label for="hora"></label>Hora:(Time)</label>
+                <input type="time">
+            </div>
+            <div class="campo">
+                <label for="Semana"></label>Semana:(week)</label>
+                <input type="week">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Preferências</legend>
+            <div class="campo">
+                <label for="li e concordo com os termos"></label>Li e concordo com os termos (checkbox)</label>
+                <input type="checkbox" name="termos" id="" required>
+            </div>
+            <div class="campo">
+                <label for="radio"></label>Radio(radio)</label><br>
+                <input type="radio" id="" name="Escolher" value="1">
+                <label for="opcao1">Feminino</label><br>
+                <input type="radio" id="" name="Escolher" value="2">
+                <label for="opcao 2">Masculino</label><br>
+                <input type="radio" id="" name="Escolher" value="3">
+                <label for="opcao3">Prefiro não dizer</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Enviar arquivos</legend>
+            <div class="campo">
+            <label for="arquivo">Arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo">
+        </div>
+        <div class="campo">
+                <label for="url">URL:(url)</label>
+                <input type="url" id="url" name="url">
+        </div>
+        <div class="campo">
+            <label for="textarea">Comentários</label>
+            <input type="textarea" id="comentario" name="comentario" cols="100" rows="100"  placeholder="Digite aqui...">
+        </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!--Agendamentos - data, hora, semana ok
+   -Preferencias - checkbox, radio ok
+   -Enviar arquivos - file, url, textarea
+  
+--> 
